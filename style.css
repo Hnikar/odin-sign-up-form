@@ -1,0 +1,119 @@
+@font-face {
+    font-family: Norse-Bold;
+    src: url(fonts/Norse-Bold.otf);
+}
+
+body{
+    display: flex;
+    margin: 0;
+    min-height: 100vmin;
+    font-family: 'Segoe UI', sans-serif; 
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: whitesmoke; 
+}
+
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    max-width: 40%;
+    padding: 4rem; 
+    font-size: 1.5rem;
+}
+
+.imgContainer{
+    background-image: url(images/image.avif);
+    width: 35%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: whitesmoke
+}
+
+.logo{
+    font-family: Norse-Bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-top: 10rem;
+    padding: 1rem 5rem;
+}
+
+form{
+    display: grid;
+    grid-template-columns: repeat(2, 15rem);
+    row-gap: 1rem;
+    column-gap: 3rem;
+}
+
+.input{
+    font-size: 0.75rem;
+}
+
+input{
+    border-radius: 0.5rem;
+    border: none;
+    width: 15rem;
+    height: 1.5rem;
+}
+
+input:invalid {
+	border: 1px solid red;
+}
+
+button{
+  font-family: inherit;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  border: solid #596D48;
+  background-color: #596D48;
+  color: whitesmoke;
+  width: 15rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  margin-top: 3rem;
+}
+
+img{
+    height: 5rem;
+}
+
+p{
+    font-weight: 600;
+}
+
+a{
+    color: #596D48;
+}
+
+.description span{
+    font-style: italic;
+}
+
+@media (max-width: 1080px) {
+    body{
+        flex-direction: column;
+    }
+    .logo{
+        width: auto;
+        margin: 5rem 0;
+    }
+    .imgContainer{
+        width: auto;
+    }
+    .mainContainer{
+        align-self: center;
+        max-width: 85%;
+        padding: 1rem;
+    }
+    
+}
+
+@media (max-width: 480px){
+    form{
+        align-self:center;
+        grid-template-columns: 15rem;
+    }
+}
